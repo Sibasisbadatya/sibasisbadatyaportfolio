@@ -43,8 +43,9 @@ app.post("/signup", async (req, res) => {
             res.render("error");
         }
         else if (password === rpassword) {
+             res.render("main");
             let registered = await database.save();
-            res.render("main");
+           
         }
         else {
             res.render("error");
